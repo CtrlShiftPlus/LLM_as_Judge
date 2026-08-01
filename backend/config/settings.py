@@ -26,10 +26,11 @@ load_dotenv(BASE_DIR / ".env")
 SECRET_KEY = "django-insecure-gp&vc#(^h)ai@lpob)ad8ik_*r@p0!d4-@bxm@y9fhn1*+xww_"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = [
+    "*"
+]
 
 # Application definition
 
@@ -83,13 +84,9 @@ WSGI_APPLICATION = "config.wsgi.application"
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'llmjudge',
-        'USER': 'judge_user',
-        'PASSWORD': 'judge123',
-        'HOST': 'localhost',
-        'PORT': '3306',
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
     }
 }
 
@@ -131,3 +128,5 @@ USE_TZ = True
 STATIC_URL = "static/"
 
 CORS_ALLOW_ALL_ORIGINS = True
+
+STATIC_ROOT = BASE_DIR / "staticfiles"
