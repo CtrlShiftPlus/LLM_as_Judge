@@ -1,0 +1,70 @@
+# ==========================
+# Python
+# ==========================
+
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual Environment
+venv/
+.venv/
+env/
+
+# Environment Variables
+.env
+*.env
+
+# Python cache
+.pytest_cache/
+.mypy_cache/
+
+# SQLite Database
+db.sqlite3
+
+# Logs
+*.log
+
+# ==========================
+# Django Static & Media
+# ==========================
+
+staticfiles/
+media/
+
+# ==========================
+# Model Checkpoints (optional)
+# Uncomment if models are too large
+# ==========================
+
+# backend/trained_models/*.pkl
+# backend/trained_models/*.joblib
+
+# ==========================
+# Node
+# ==========================
+
+node_modules/
+dist/
+
+# npm logs
+npm-debug.log*
+
+# ==========================
+# VS Code
+# ==========================
+
+.vscode/
+
+# ==========================
+# macOS
+# ==========================
+
+.DS_Store
+
+# ==========================
+# Windows
+# ==========================
+
+Thumbs.db
